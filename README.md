@@ -228,20 +228,43 @@ Yaş: 21, Ad: Sümeyye, Boy: 1.61
 Örnek 8 : Type Safety
 100
 ```
-</br>
 - Type Safety – Tür	Güvenliği
   - Oluşturduğunuz	değişkene	farklı	türde	değişken	atayamazsınız.
 - Değişkenin	kapsamı	(Global	ve	Local Değişken	)
   - Süslü	parantez	{	}	bizim	kapsamımızı	belirler.	Değişkenin	ulaşılabilirliği buna	bağlıdır.
-</br>
+<br></br>
 ### Constant - Sabitler
 - Sabitler	içerisine	bir	kere	veri	atıldığında	bir	daha	değiştiremeyeceğiniz	yapılardır.
 - **final**	ve **const** ismi	ile	kullanılırlar.
-- const değişken	oluşturduğumuz	anda	hafızada	oluşur.
-- final değişken	oluşturulduktan	sonra	kod	çalıştırıldığında	hafızada	oluşur.
-- const sınıf	içinde	kullanılmaz.
-- Genelde	yaygın	kullanım	final dır.
+- **const** değişken	oluşturduğumuz	anda	hafızada	oluşur.
+- **final** değişken	oluşturulduktan	sonra	kod	çalıştırıldığında	hafızada	oluşur.
+- **const** sınıf	içinde	kullanılmaz.
+- Genelde	yaygın	kullanım	**final** dır.
 - Sabit	kullanmak	memory yönetimini	rahatlatır.
 - Çünkü	hafızada	sabit	için	yer	ayrılır	ve	değişim	olmayacağı	için	açılan	yer	yeni	bir	değer	
 almak	için	beklemez.
 - Sadece	kullanılma	amaçlı	değişkenler	için	kullanılması	için	uygundur.
+- Kaçış	karakterleri	String	ifade	içine	bazı	karakterleri	yazmamızı	sağlarlar.
+- Bunun	çıkış	sebebi	String	ifadelerin		”	işareti	ile	başlayıp	bitmesidir.
+- En	çok	kullanılan	kaçış	karakterleri.
+  - \\ – \ işareti
+  - \t – Bir	tab	boşluk	bırakır
+  - \n	– Bir	alt	satıra	iner
+  - \” – Çift	tırnak	işareti
+  - \’ – Tek	tırnak	işareti
+- Yorum	Satırları
+  - Yorum	satırı	kullanımının	birçok	amacı	vardır.
+  - Kodunuza	anlaşılır	notlar	yazmak.
+  - Bazı	kod	satırını	geçici	olarak	gizlemek	için	kullanılabilir.
+  - Satıra	yorum	ekleme	;
+    - //	işareti	ile	yapılır.	
+  - Blok	yorumu	ekleme;
+    - /*	ile	açılır	*/	kapatılır.Tek	satır	değil	birden	fazla	satır	için	kullanılabilir.
+### Aritmetik	Operatörler
+- Matematiksel	işlemleri	yapmamızı	sağlarlar.	
+- Parantezler	işlemin	önceliğini	belirtmek	için	kullanılır.
+- + -> Toplama
+  - A + B = 30
+- - -> Çıkarma
+  - A - B = -10
+    
