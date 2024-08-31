@@ -46,3 +46,43 @@ değişkenlerin değerleri diske yazılmalıdır.
   - "S" //Harfsel ifade
   - 21 //Tam sayı (int)
   - 1.61 //Ondalıklı Sayı (double)
+- Değişkenlere isim verme Kuralları :
+  - Case	sensitive’dir.Büyük küçük	harf	farkı	vardır.
+  - Rakamla	başlayamaz.
+  - @	ve	%	değişken	içerisinde	kullanılmaz.
+  - Bazı örnekler;
+    - Azad
+    - zara
+    - abc
+    - move_name
+    - a_123
+    - myname50
+    - _temp
+    - j
+    - retVal
+- Örnek 1 : Bir öğrencinin *adını*, *yaşını*, *boyunu* ve *adının baş harfinin* tutulduğu değişken oluşturunuz.
+  - Kod :
+```flutter
+class ogrenciBilgi{
+  var ogrenci_ad = "Sümeyye";
+  int ogrenciYas = 21;
+  double ogrenci_boyu = 1.61;
+  String ogrenci_basHerfi = "S";
+
+}
+
+void main(){
+  var o1 = ogrenciBilgi();
+  print("Öğrenci Adı: ${o1.ogrenci_ad}");
+  print("Öğrenci Yaşı: ${o1.ogrenciYas}");
+  print("Öğrenci Boyu: ${o1.ogrenci_boyu}");
+  print("Öğrenci Baş Herfi: ${o1.ogrenci_basHerfi}");
+}
+```
+  - Çıktı :
+```flutter
+Öğrenci Adı: Sümeyye
+Öğrenci Yaşı: 21
+Öğrenci Boyu: 1.61
+Öğrenci Baş Herfi: S
+```
