@@ -265,6 +265,29 @@ almak	için	beklemez.
 - Parantezler	işlemin	önceliğini	belirtmek	için	kullanılır.
 - "+" -> Toplama
   - A + B = 30
-- - -> Çıkarma
+- "-" -> Çıkarma
   - A - B = -10
-    
+- "*" -> Çarpma
+  - A * B = 200
+- "/" -> Bölme
+  - B / A = 2
+- "%" -> Mod İşlemi
+  - B % A = 0
+- Atama	Operatörlerinin	Kısaltımı
+  - Atama	işlemlerini	kolaylaştırma	amaçlı	kullanılırlar.
+  - Aritmetik	operatörlerin	hepsinde	geçerlidir.
+  - Normal	ifade	;
+  - a = a + 3
+    - a += 3
+  - b = b - 3
+    - b -= 3
+  - c = c * 3
+    - c *= 3
+  - d =  / 3
+    - d /= 3
+### Tür Dönüşümü
+1. Sayısaldan	sayısala	dönüşüm
+2. Sayısaldan	metine	dönüşüm
+3. Metinden	sayısala	dönüşüm
+- **toDouble()	,	toInt()	,	toString()	,	int.parse()	,	double.parse()**
+- 
