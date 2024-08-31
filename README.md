@@ -118,7 +118,7 @@ void main(){
 Ürün Fiyat: 149.99
 Ürün Tedarikçi: rolex
 ```
-</br>
+<br></br>
 ### print() metodu ile çıktı alma
 - Kodlama	yaparken	kodların	çalışma	sonuçlarını	bu	metod ile	takip	edebiliriz.
 - print()	alt	alta	yazmak	için	kullanılır.
