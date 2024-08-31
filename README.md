@@ -287,7 +287,244 @@ almak	için	beklemez.
     - d /= 3
 ### Tür Dönüşümü
 1. Sayısaldan	sayısala	dönüşüm
+```flutter
+int i = 42;
+double d = 42.25;
+
+int sonuc1 = d.toInt();
+double sonuc2 = i.toDouble();
+```
 2. Sayısaldan	metine	dönüşüm
+```flutter
+int i = 42;
+double d = 42.25;
+
+String str1 = i.toString();
+String str2 = d.toString();
+```
 3. Metinden	sayısala	dönüşüm
+- Dönüşüm	olurken	dikkatli	olunmalıdır	çünkü	metin	içinde	her	zaman	
+sayı	yer	almaz	hata	ihtimali	yüksektir
+```flutter
+String yazi1 = "34";
+String yazi2 = "34.67";
+
+int s1 = int.parse(yazi1);
+double s2 = double.parse(yazi2);
+```
 - **toDouble()	,	toInt()	,	toString()	,	int.parse()	,	double.parse()**
-- 
+
+### Konsol Girdisi
+- Sadece	string türünde	girdi	olabilir.
+- stdin import edilmelidir.
+- readLineSync() metodu	ile	veri	konsoldan	okunur.
+- Kod:
+```flutter
+import 'dart:io';
+void main(){
+
+  print("Adınızı Giriniz: ");
+
+  String isim = stdin.readLineSync()!;
+  print("Adınız : $isim");
+
+  print("1.Sayıyı Giriniz: ");
+  int sayi1 = int.parse(stdin.readLineSync()!);
+
+  print("2. Sayıyı Giriniz: ");
+  int sayi2 = int.parse(stdin.readLineSync()!);
+
+  print("Toplam: ${sayi1+sayi2}");
+}
+```
+<br></br>
+## Standart	Programlama	Yapıları
+#### Karar	Alma	Yapıları	(if - when)
+- Belirlenen	şartlara	göre	karar	alan	
+yapılardır.
+- Kararlar,	şartın	true veya	false olmasına	
+göre	alınır.
+#### Karşılaştırma	Operatörü
+- Koşul	gereken	yerlerde	kullanılır.	Örn :	if ,	while vb.
+- == -> Eşittir
+  - (A == B) is not true
+- != -> Eşit Değil
+  - (A != B) is true
+- > -> Büyüktür
+  - (A > B) is not true
+- < -> Küçüktür
+  - (A < B) is true
+- >= -> Büyük Eşittir
+  - (A >= B) is not true
+- <= -> Küçük Eşittir
+  - (A <= B) is true
+#### Mantıksal	Operatörler
+- Mantıksal	işlemleri	bu	operatörler	ile	yaparız.
+- Her	iki	şart	sağlandığında	gibi.
+- && -> AND: Her iki koşulda sağlanıyorsa true olur.
+  - (A && B) is false.
+- || -> OR: İki koşuldan biri sağlanıyorsa true olur.
+  - (A || B) is true.
+- ! -> NOT: Var olan durumun tersine dönüştürür.
+  - !(A && B) is true.
+#### if Yapısı
+```flutter
+/*
+if(şart){
+şarta bağlı kod (TRUE ise)
+}
+*/
+  int yas = 20;
+  if (yas >= 18){
+    print("Reşitsiniz");
+  }
+```
+```flutter
+/*
+if(şart){
+şarta bağlı kod (TRUE ise)
+} else {
+şarta bağlı kod (FALSE ise)
+}
+*/
+  int yas = 17;
+  if (yas >= 18){
+    print("Reşitsiniz");
+  } else {
+    print("Reşit değilsiniz");
+  }
+
+  String isim = "Sümeyye";
+  if (isim == "Sumeyye"){
+    print("Merhaba Sümeyye");
+  } else {
+    print("Tanınmayan Kişi");
+  }
+```
+- Çoklu Şart
+```flutter
+void main(){
+  int a = 10;
+  int b = 20;
+  
+  if(a == 10 && b == 20){
+    print("Her iki şartta sağlandı");
+  }
+  
+  if(a == 10 || b == 20){
+    print("Her iki şarttan an az biri sağlandı");
+  }
+}
+```
+- else if
+```flutter
+void main(){
+  int c = 15;
+  
+  if(a == 20){
+    print("a 20'ye eşittir");
+  } else if(a == 50){
+    print("a 50'ye eşittir");
+  } else{
+    print("a hiçbir şarta eşit değildir");
+  }
+}
+```
+- **Örnek** : Kullanıcıdan	alınan	seçime	göre	hesap	yapan	programı	yazınız.
+  - Kod:
+```flutter
+  print("Örnek: Kullanıcıdan	alınan	seçime	göre	hesap	yapanprogramı	yazınız.");
+
+  print("Dikdörtgen Alanı (1)");
+  print("Çember Alan (2)");
+  int secim = int.parse(stdin.readLineSync()!);
+  print("Seçiminiz: $secim");
+  if(secim == 1){
+    print("Kısa kenar giriniz: ");
+    int kisaKenar = int.parse(stdin.readLineSync()!);
+    print("Uzun Kenar giriniz: ");
+    int uzunKenar = int.parse(stdin.readLineSync()!);
+    int sonuc = kisaKenar * uzunKenar;
+    print("Dikdörtgen alanı: $sonuc");
+  }
+  else if(secim == 2){
+    print("Yarıçapı giriniz: ");
+    int yaricap = int.parse(stdin.readLineSync()!);
+    double sonuc = 3.14*yaricap*yaricap;
+    print("Çember alanı: $sonuc");
+  }
+  else{
+    print("Hatalı seçim :(");
+  }
+```
+  - Çıktı:
+```flutter
+Örnek: Kullanıcıdan	alınan	seçime	göre	hesap	yapanprogramı	yazınız.
+Dikdörtgen Alanı (1)
+Çember Alan (2)
+1
+Seçiminiz: 1
+Kısa kenar giriniz: 
+12
+Uzun Kenar giriniz: 
+14
+Dikdörtgen alanı: 168
+```
+- **Örnek** : Kullanıcıdan	alınan	seçime	göre	hesap	yapan	programı	yazınız.
+  - Kod:
+```flutter
+  print("Örnek : Kullanıcıdan	alınan	seçime	göre	hesap	yapanprogramı	yazınız.");
+  print("Toplama (1)\nÇıkarma (2)\nÇarpma (3)\nBölme (4)\nMod Alma (5)");
+
+  print("Lütfen seçim yapınız: ");
+  int secim = int.parse(stdin.readLineSync()!);
+
+  print("Birinci sayıyı Giriniz : ");
+  int sayi = int.parse(stdin.readLineSync()!);
+
+  print("İkinci sayıyı giriniz: ");
+  int sayi2 = int.parse(stdin.readLineSync()!);
+
+  if(secim == 1){
+    var toplam = sayi + sayi2;
+    print("Toplam: $toplam");
+  }
+  else if(secim == 2){
+    var cikarma = sayi - sayi2;
+    print("Çıkarma: $cikarma");
+  }
+  else if(secim == 3){
+    var carpma = sayi * sayi2;
+    print("Çarpma: $carpma");
+  }
+  else if(secim == 4){
+    var bolme = sayi / sayi2;
+    print("Bölme: $bolme");
+  }
+  else if(secim == 5){
+    var modAlma = sayi % sayi2;
+    print("Mod Alma: $modAlma");
+  }
+  else{
+    print("Hatalı seçim :(");
+  }
+```
+  - Çıktı:
+```flutter
+Örnek : Kullanıcıdan	alınan	seçime	göre	hesap	yapanprogramı	yazınız.
+Toplama (1)
+Çıkarma (2)
+Çarpma (3)
+Bölme (4)
+Mod Alma (5)
+Lütfen seçim yapınız: 
+3
+Birinci sayıyı Giriniz : 
+12
+İkinci sayıyı giriniz: 
+3
+Çarpma: 36
+```
+### Switch
+- else	if yapısının	daha	pratik	kullanımıdır.
+- Case	denilen	durumlar	sağlanırsa	kod	çalışır.	
