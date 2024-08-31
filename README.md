@@ -528,3 +528,108 @@ Birinci sayıyı Giriniz :
 ### Switch
 - else	if yapısının	daha	pratik	kullanımıdır.
 - Case	denilen	durumlar	sağlanırsa	kod	çalışır.	
+### Döngüler
+- Döngüler	belirli	kodları	tekrarlı	çalıştırma	amaçlı	yapılardır.
+- Örneğin	;	veri	tabanından	gelen	verileri	işlemek	gibi.
+- Döngü	türleri	;
+  - for
+  - while
+#### for Döngüsü
+- Kod:
+```flutter
+/*
+for(var i=0; i<5; i++){
+Tekrarlanan kod yapısı
+}
+i=0 -> başlangıç
+i<5 -> bitiş şartı
+i++ -> artış
+*/
+for(var i=0; i<5; i++){
+print(i);
+}
+/*
+for(var veri in veri_kümesi){
+Tekrarlanan kod yapısı
+}
+*/
+var dizi = [10, 20, 30];
+for(var deger in dizi){
+print("Sonuç : $deger");
+}
+```
+- Çıktı:
+```flutter
+0
+1
+2
+3
+4
+
+Sonuç : 10
+Sonuç : 20
+Sonuç : 30
+```
+#### while Döngüsü
+- Kod:
+```flutter
+/*
+while(şart){
+Tekrarlanan ifade
+}
+*/
+var sayac = 1;
+while(sayac < 4){
+  print("Sonuç : $sayac");
+  sayac += 1; //sayac = sayac + 1
+}
+```
+- Çıktı:
+```flutter
+Sonuç : 1
+Sonuç : 2
+Sonuç : 3
+```
+#### break : işlemi bitirir
+- Kod:
+```flutter
+var sayac = 0;
+while (sayac < 5){
+  if(sayac == 3){
+    break;
+  }
+  print("Döngü 1 : $sayac");
+  sayac += 1;
+}
+```
+- Çıktı:
+```flutter
+Döngü 1 : 0
+Döngü 1 : 1
+Döngü 1 : 2
+```
+#### continue : işlemi pas geçer
+- Kod:
+```flutter
+for(var i=0; i<5; i++){
+  if(i == 3){
+    continue;
+  }
+  print("Döngü 2 : $i");
+}
+```
+- Çıktı:
+```flutter
+Döngü 2 : 0
+Döngü 2 : 1
+Döngü 2 : 2
+Döngü 2 : 4
+```
+#### Örnek : Konsoldan	girilen	adınızı		konsoldan	girdiğiniz	tekrar	sayısı	kadar	yazdıran	programı	yazınız.
+- Kod:
+```flutter
+Döngü 2 : 0
+Döngü 2 : 1
+Döngü 2 : 2
+Döngü 2 : 4
+```
