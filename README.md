@@ -60,7 +60,7 @@ değişkenlerin değerleri diske yazılmalıdır.
     - _temp
     - j
     - retVal
-- Örnek 1 : Bir öğrencinin *adını*, *yaşını*, *boyunu* ve *adının baş harfinin* tutulduğu değişken oluşturunuz.
+- **Örnek 1** : Bir öğrencinin *adını*, *yaşını*, *boyunu* ve *adının baş harfinin* tutulduğu değişken oluşturunuz.
   - Kod :
 ```flutter
 class ogrenciBilgi{
@@ -85,4 +85,146 @@ void main(){
 Öğrenci Yaşı: 21
 Öğrenci Boyu: 1.61
 Öğrenci Baş Herfi: S
+```
+- **Örnek 2** : Bir	şirketin	ürünlerinin	bilgilerinin	tutulduğu	ürünler	tablosunu	temsil	eden değişkenleri oluşturunuz.
+  - Kod :
+```flutter
+class urunBilgileri{
+  late int urun_id;
+  late String urun_adi;
+  late int urun_adet;
+  late double urun_fiyat;
+  late String urun_tedarikci;
+}
+void main(){
+  var u1 = urunBilgileri();
+  u1.urun_id = 3416;
+  u1.urun_adi = "Kol Saati";
+  u1.urun_adet = 100;
+  u1.urun_fiyat = 149.99;
+  u1.urun_tedarikci = "rolex";
+  print("Ürün id: ${u1.urun_id}");
+  print("Ürün Adı: ${u1.urun_adi}");
+  print("Ürün Adet: ${u1.urun_adet}");
+  print("Ürün Fiyat: ${u1.urun_fiyat}");
+  print("Ürün Tedarikçi: ${u1.urun_tedarikci}");
+}
+```
+  - Çıktı :
+```flutter
+Ürün id: 3416
+Ürün Adı: Kol Saati
+Ürün Adet: 100
+Ürün Fiyat: 149.99
+Ürün Tedarikçi: rolex
+```
+<br>
+### print() metodu ile çıktı alma
+- Kodlama	yaparken	kodların	çalışma	sonuçlarını	bu	metod ile	takip	edebiliriz.
+- print()	alt	alta	yazmak	için	kullanılır.
+- String ifade	içine	$ ifadesi	kullanılarak	çıktıya	değişken	eklenebilir.
+- String ifade	içine	${} ifadesi	kullanılarak	işlem	yapılabilir.
+- **Örnekler** : 
+```flutter
+void main(){
+
+  print("Örnek 3");
+  
+  var sayi = 10;
+  int numara = 88;
+  
+  print(sayi);
+  print(numara);
+  
+  print("****************************************");
+  
+  print("Örnek 4 : Değişkenin değerini daha sonra değiştirebiliriz!");
+  
+  var fiyat = 12.99;
+  double ucret = 23.59;
+  
+  print(fiyat);
+  print(ucret);
+  
+  fiyat = 67.99;
+  ucret = 10.45;
+  
+  print(fiyat);
+  print(ucret);
+
+  print("****************************************");
+  
+  print("Örnek 5 : İşlem yaptıktan sonra başka bir değişkene veri aktarılabilir.");
+  
+  var sayi1 = 10;
+  int sayi2 = 20;
+  
+  var toplam = sayi1 + 50;
+  int carpma = sayi1 * sayi2;
+  
+  print(toplam);
+  print(carpma);
+
+  print("****************************************");
+
+  print("Örnek 6 : Boş değişken oluşturup daha sonra değer aktarabiliriz.");
+
+  var sonuc1;
+  int sonuc2;
+
+  sonuc1 = 333;
+  sonuc2 = 555;
+
+  print(sonuc1);
+  print(sonuc2);
+
+  print("****************************************");
+
+  print("Örnek 7 : Yan yana değişken oluşturma");
+
+  var s1, s2, s3;
+
+  s1 = 21;
+  s2 = "Sümeyye";
+  s3 = 1.61;
+
+  print("Yaş: $s1, Ad: $s2, Boy: $s3");
+
+  int k1 = 325, k2 = 212803080;
+  print("$k1 $k2");
+
+  print("****************************************");
+
+  print("Örnek 8 : Type Safety");
+  var deger = 100;
+  //deger = "Sümeyye"; "Sümeyye" bu kısımda hata verir
+  print(deger);
+}
+```
+- **Çıktı** :
+```flutter
+Örnek 3
+10
+88
+****************************************
+Örnek 4 : Değişkenin değerini daha sonra değiştirebiliriz!
+12.99
+23.59
+67.99
+10.45
+****************************************
+Örnek 5 : İşlem yaptıktan sonra başka bir değişkene veri aktarılabilir.
+60
+200
+****************************************
+Örnek 6 : Boş değişken oluşturup daha sonra değer aktarabiliriz.
+333
+555
+****************************************
+Örnek 7 : Yan yana değişken oluşturma
+Yaş: 21, Ad: Sümeyye, Boy: 1.61
+325 212803080
+****************************************
+Örnek 8 : Type Safety
+100
 ```
