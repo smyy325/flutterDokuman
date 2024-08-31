@@ -118,7 +118,7 @@ void main(){
 Ürün Fiyat: 149.99
 Ürün Tedarikçi: rolex
 ```
-<</br>
+</br>
 ### print() metodu ile çıktı alma
 - Kodlama	yaparken	kodların	çalışma	sonuçlarını	bu	metod ile	takip	edebiliriz.
 - print()	alt	alta	yazmak	için	kullanılır.
@@ -228,3 +228,20 @@ Yaş: 21, Ad: Sümeyye, Boy: 1.61
 Örnek 8 : Type Safety
 100
 ```
+</br>
+- Type Safety – Tür	Güvenliği
+  - Oluşturduğunuz	değişkene	farklı	türde	değişken	atayamazsınız.
+- Değişkenin	kapsamı	(Global	ve	Local Değişken	)
+  - Süslü	parantez	{	}	bizim	kapsamımızı	belirler.	Değişkenin	ulaşılabilirliği buna	bağlıdır.
+</br>
+### Constant - Sabitler
+- Sabitler	içerisine	bir	kere	veri	atıldığında	bir	daha	değiştiremeyeceğiniz	yapılardır.
+- **final**	ve **const** ismi	ile	kullanılırlar.
+- const değişken	oluşturduğumuz	anda	hafızada	oluşur.
+- final değişken	oluşturulduktan	sonra	kod	çalıştırıldığında	hafızada	oluşur.
+- const sınıf	içinde	kullanılmaz.
+- Genelde	yaygın	kullanım	final dır.
+- Sabit	kullanmak	memory yönetimini	rahatlatır.
+- Çünkü	hafızada	sabit	için	yer	ayrılır	ve	değişim	olmayacağı	için	açılan	yer	yeni	bir	değer	
+almak	için	beklemez.
+- Sadece	kullanılma	amaçlı	değişkenler	için	kullanılması	için	uygundur.
