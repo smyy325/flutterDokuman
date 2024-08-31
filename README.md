@@ -263,7 +263,7 @@ almak	için	beklemez.
 ### Aritmetik	Operatörler
 - Matematiksel	işlemleri	yapmamızı	sağlarlar.	
 - Parantezler	işlemin	önceliğini	belirtmek	için	kullanılır.
-- + -> Toplama
+- "+" -> Toplama
   - A + B = 30
 - - -> Çıkarma
   - A - B = -10
