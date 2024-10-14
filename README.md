@@ -346,17 +346,17 @@ yapılardır.
 göre	alınır.
 #### Karşılaştırma	Operatörü
 - Koşul	gereken	yerlerde	kullanılır.	Örn :	if ,	while vb.
-- == -> Eşittir
+- *==* -> Eşittir
   - (A == B) is not true
-- != -> Eşit Değil
+- *!=* -> Eşit Değil
   - (A != B) is true
-- > -> Büyüktür
+- *>* -> Büyüktür
   - (A > B) is not true
-- < -> Küçüktür
+- *<*-> Küçüktür
   - (A < B) is true
-- >= -> Büyük Eşittir
+- *>=* -> Büyük Eşittir
   - (A >= B) is not true
-- <= -> Küçük Eşittir
+- *<=* -> Küçük Eşittir
   - (A <= B) is true
 #### Mantıksal	Operatörler
 - Mantıksal	işlemleri	bu	operatörler	ile	yaparız.
