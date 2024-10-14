@@ -346,17 +346,17 @@ yapılardır.
 göre	alınır.
 #### Karşılaştırma	Operatörü
 - Koşul	gereken	yerlerde	kullanılır.	Örn :	if ,	while vb.
-- == -> Eşittir
+- *==* -> Eşittir
   - (A == B) is not true
-- != -> Eşit Değil
+- *!=* -> Eşit Değil
   - (A != B) is true
-- > -> Büyüktür
+- *>* -> Büyüktür
   - (A > B) is not true
-- < -> Küçüktür
+- *<*-> Küçüktür
   - (A < B) is true
-- >= -> Büyük Eşittir
+- *>=* -> Büyük Eşittir
   - (A >= B) is not true
-- <= -> Küçük Eşittir
+- *<=* -> Küçük Eşittir
   - (A <= B) is true
 #### Mantıksal	Operatörler
 - Mantıksal	işlemleri	bu	operatörler	ile	yaparız.
@@ -633,3 +633,38 @@ Döngü 2 : 1
 Döngü 2 : 2
 Döngü 2 : 4
 ```
+
+<br></br>
+## Nesne Tabanlı Programlama
+#### Sınıf (Class) Nedir?
+- Nesneler soyutlanarak bilgisayar koduna dönüştürülür oluşan soyut taslaklara sınıf (class) denir.
+#### Nesne (Object) Nedir?
+- Nesneler sınıfların somutlaşmış halleridir.
+- Nesnelerin durumu (state) ve davranış biçimleri vardır (behaviour).
+- Örneğin:
+  - renk, hız, kapasite -> Durum (state)
+  - hızlanmak ve yavaşlamak için pedallar -> Davranış (behaviour)
+- Sınıflar ise nesnelerin özellikleri ve davranışları ile ilgili ayrıntıları içerir.
+#### Nesnenin Durumu ve Davranışı
+- **Durum (State)**: Sınıfların bir-birçok özelliği olabilir
+  - *Somut değişkenler (instance variables)* belirler
+  - Nesneyle birlikte taşınır
+- **Davranış (behaviour)**: Sınıflar bir ya da birden çok metoda sahip olabilir
+  - *Metod* program içindeki bir işi temsil eder
+    - Görevlerin gerçekleştirileceği adımları tanımlar
+    - kullanıcıdan kompleks işlemleri gizler
+    - Metodu çağırmak, metodun bu işlemleri gerçekleştirmesini sağlar
+**late**: sınıf içinde değişkene değer aktarmadan değişken oluşturmamızı sağlar.
+- Class yapısı içindeki metod ve özelliklerine erişmek için *ilk şart bulunduğu Class'dan nesne oluşturmalı.*
+- Her nesne kendine ait özelliklere erişebilir ve veri aktarımı yapabilir.
+<br></br>
+### Fonksiyonlar
+- Belirli	işlemleri	temsil	eden	yapılardır.
+- Kullanma	amacımız	tekrarlanan	kod	yapılarının	önüne	geçmektir.
+- Programlamayı	daha	pratik	bir	hale	getirir.
+- Kodun	okunmasına	faydası	vardır.
+- Geri	Dönüş	değeri	olmayan	fonksiyonlar
+  - Sadece	yaptırılmak	istenen	işlemi	yapan	metodu	kullanana	veri döndürmeyen fonksiyonlardır.
+- Geri	Dönüş	değeri	olan	fonksiyonlar
+  - Yapılan	işlem	sonucunda	metodu	kullanana	veri	dönüşü	yapan	fonksiyonlardır.
+  - 
