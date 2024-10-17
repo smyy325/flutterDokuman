@@ -667,4 +667,76 @@ Döngü 2 : 4
   - Sadece	yaptırılmak	istenen	işlemi	yapan	metodu	kullanana	veri döndürmeyen fonksiyonlardır.
 - Geri	Dönüş	değeri	olan	fonksiyonlar
   - Yapılan	işlem	sonucunda	metodu	kullanana	veri	dönüşü	yapan	fonksiyonlardır.
-  - 
+-  Fonksiyonların	Parametre	Alması
+  - Parametre	fonksiyonlara	dışarıdan	verilen	değerlerdir.
+  - Her	fonksiyonun	parametresi	olmak	zorunda	değildir.
+  - Parametreler	tanımlaması	değişkeni	tanımlar	gibidir.	
+  - Parametreler	,	virgül	ile	birden	fazla	tanımlanabilir.
+  - Birden	fazla	parametre	kullanılabilir.
+
+<br></br>
+### Null Safety
+- Kullandığımız	değişkenler	null	olabilir.
+- Null	Safety	özelliğini	kullanmak	için	değişken	türünden	sonra	'?' işareti	kullanılır.
+- Null	safety	özelliği	olan	değişkenden	sonra	!	işareti	kullanılırsa	,	null	olmayacağını ben	kodlamama	güveniyorum	demektir.
+- Null	safety	özelliği	olan	değişkenden	sonra ?	kullanırsa	,	null	olduğunda	hata oluşmaz	korumaya	alır	,	null	olmaz	ise	normal	çalışmasını	gerçekleştirir.
+#### late
+- Değişken	tanımlandığı	anda	hafızada	yer	ayrılmasındansa,değişkeni	ilk	kullandığımız	anda	hafızada	yer	ayrılmasını	sağlar.
+- Sınıfın	constructorı	varsa	ve	içinde	değişken	ataması	yapılabilirse	late kullanmaya	gerek	yoktur.
+#### Constructor
+- Bir	sınıftan	(	class )	nesne	oluşturmak	için	gerekli	olan	yapıdır.
+- Bir	sınıfta	hem	boş	hem	dolu	constructor olamaz.
+- Dolu	constructor	varsa	late	kullanılmasına	gerek	yoktur.
+<br></br>
+### Paketler & Import
+- Paketler birden	fazla	sınıfı	kümelediğimiz	yapılardır.
+- Paketler ile	daha	düzenli	projeler	oluşturulabilir.
+- Import bir	sınıfı	başka	bir	sınıf	içinde	kullanıcaksa o	sınıfı	import etmeliyiz.
+- Bir	sınıfın	tüm	uzantısı	kullanıldığında	import’a gerek	yoktur.
+<br></br>
+### Static Değişkenler ve	Metodlar
+- Bir	değişkenin	veya	metodun,	bulunduğu	sınıftan	(	class )	nesne	oluşturmaya	gerek	kalmadan	erişilmek	istenirse	kullanılır.
+<br></br>
+### Enumeration
+- **enum** ifadesi	gösterilir.
+- Parametrelerde	kullanılır.
+- Verilerin	eşleşmesi	sonucunda	bir	işlem	yapılır.
+- Kodlama	yapan	yazılımcıyı	detaydan	kurtarmaktadır
+<br></br>
+### Composition
+- Başka	sınıflardan	(	class )	oluşmuş	nesneler	bir	sınıfın	değişkeni	olabilir.
+<br></br>
+### Kalıtım	(	Inheritance )
+- Mevcut	bir	sınıftan	başka	bir	sınıf	türetmek	için	kullanılır.
+- Kodun	tekrar	kullanabilirliğiniartırır.
+- Sadece	**class** için	geçerlidir.
+- Super class **extends** kelimesi	ile	subclass’a eklenir.
+- Bir	sınıfın	tek	kalıtımı	olabilir.
+- Bir	sınıfa	birden	fazla	sınıf	kalıtım	yolu	ile	bağlanamaz.
+- Üst	sınıfa	**superclass** denir.
+- Alt	sınıfa	**subclass** denir
+- Kalıtım	yoluyla	oluşturulan	sınıfın	constructor’ı üst	sınıfın	özelliklerini	almalıdır.
+<br></br>
+### Override
+- Metodları Ezme	:	Overriding, kalıtım	ilişkisinde	üst	sınıfın	metodlarının alt	sınıf	tarafından	tekrar	kullanılmasıdır.
+<br></br>
+### PolyMorphism
+- PolyMorphism olması	için	iki	sınıf	arasında	kalıtım	ilişkisi	olmalıdır.
+- Daha	kapsayıcı	bir	kullanım	sağlamak	için	kullanılır.
+- Özellikle	metodların parametrelerinde	PolyMorphism kullanılarak	daha	kapsayıcı	veriler	alınabilir.
+- Superclass gibi	görünüp	subclass gibi	davranır.
+- Özellikle	metodların parametrelerinde	PolyMorphism kullanılarak	daha	kapsayıcı	veriler	alınabilir.
+<br></br>
+### Nesnelerin	Tip	Dönüşümü
+- Tip	kontrolü **is**	ile	yapılabilir.is	true false şeklinde	bilgi	verir.
+- Downcasting ve	Upcasting olması	için	kalıtım	ilişkisi olmalıdır.
+<br></br>
+### Interface
+- Class	yapısında	kullanılabilir.
+- Bir	sınıf	birden	fazla	interface alabilir.
+- implements ile	eklenirler.
+- Hazır	taslaklar	gibi	düşünebilirsiniz.
+- Interface’ler sınıflara	özellik	katar.
+<br></br>
+<br></br>
+## Collections
